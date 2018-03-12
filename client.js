@@ -34,4 +34,25 @@ function addDiv() {
 function newButtons(newDivElement) {
   newDivElement.append( '<button id="swapBtn">Swap</button>' );
   newDivElement.append( '<button id="deleteBtn">Delete</button>' );
+  swapToYellow(newDivElement);
 } // end newButtons
+
+// change new div background to yellow
+function swapToYellow(newDivElement){
+  $('#swapBtn').on('click', function(){
+    if (newDivElement.css('background-color', 'red')){
+      newDivElement.css('background-color', 'yellow');
+    } else {}
+    swapToRed(newDivElement);
+  }); // end on click
+} // end swap to yellow
+
+// change new div background to red
+function swapToRed( newDivElement ){
+  $('#swapBtn').on( 'click', function(){
+    if( newDivElement.css('background-color', 'yellow') ) {
+      newDivElement.css('background-color', 'red');
+    } else {} // end if
+    swapToYellow(newDivElement);
+  }); // end on click
+} // end swapToRed
