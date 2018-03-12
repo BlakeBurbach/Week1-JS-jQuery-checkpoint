@@ -16,4 +16,4 @@
 
 - [x] Clicking the "Swap" <button> again should turn the color back to Red.
 
-Clicking a "Delete" <button> should remove its parent <div> container (and all of its contents).
+- [x] Clicking a "Delete" <button> should remove its parent <div> container (and all of its contents).

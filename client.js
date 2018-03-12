@@ -35,6 +35,7 @@ function newButtons(newDivElement) {
   newDivElement.append( '<button id="swapBtn">Swap</button>' );
   newDivElement.append( '<button id="deleteBtn">Delete</button>' );
   swapToYellow(newDivElement);
+  removeDiv();
 } // end newButtons
 
 // change new div background to yellow
@@ -56,3 +57,10 @@ function swapToRed( newDivElement ){
     swapToYellow(newDivElement);
   }); // end on click
 } // end swapToRed
+
+// a remove button that will remove a new div from the DOM
+function removeDiv(){
+  $('#newDivs').on( 'click', '#deleteBtn', function(){
+    $( this ).closest( '#newDivElement' ).remove();
+  }); // end on click
+} // end removeEmployee
