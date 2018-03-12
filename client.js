@@ -15,7 +15,9 @@ function readyNow() {
 // function that creates a div element when generate button is clicked
 function addDiv() {
   // variable to hold each newly created div element
-  let newDivElement = $('<div id="newDivElement"></div>');
+  let newDivElement = $('<div id="newDivElement" class="newDiv"></div>');
+  // every time new div is created, make it's background color red
+  newDivElement.css( 'background-color', 'red' );
   // append each newly created div to the dom
   $('#newDivs').append( newDivElement );
   // increase number of times button has been clicked
@@ -32,6 +34,4 @@ function addDiv() {
 function newButtons(newDivElement) {
   newDivElement.append( '<button id="swapBtn">Swap</button>' );
   newDivElement.append( '<button id="deleteBtn">Delete</button>' );
-  changeParentColors();
-  deleteParent();
 } // end newButtons
